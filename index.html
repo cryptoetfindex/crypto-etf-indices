@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto ETF Indcies</title>
+    <link rel="icon" type="image/png" href="/cryptoetfindex/CryptoETFIndex%20Logo.png">
+    <link rel="apple-touch-icon" href="/cryptoetfindex/CryptoETFIndex%20Logo.png">
+    <meta property="og:title" content="Crypto ETF Indcies">
+    <meta property="og:description" content="Redirecting to Crypto ETF Index, your source for tokenized stock analytics.">
+    <meta property="og:image" content="/cryptoetfindex/CryptoETFIndex%20Logo.png">
+    <meta property="og:url" content="https://cryptoetfindcies.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Crypto ETF Indcies">
+    <meta name="twitter:description" content="Redirecting to Crypto ETF Index, your source for tokenized stock analytics.">
+    <meta name="twitter:image" content="/cryptoetfindex/CryptoETFIndex%20Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        :root {
+            --background: linear-gradient(135deg, #0d1b2a, #1b263b);
+            --text-color: #e0e1dd;
+            --card-bg: rgba(27, 38, 59, 0.9);
+            --select-bg: rgba(255, 255, 255, 0.1);
+            --accent-color: #00ddeb;
+            --shadow-color: rgba(0, 221, 235, 0.2);
+            --button-bg: #00ddeb;
+        }
+        [data-theme="normal"] {
+            --background: linear-gradient(135deg, #0d1b2a, #1b263b);
+            --text-color: #e0e1dd;
+            --card-bg: rgba(27, 38, 59, 0.9);
+            --select-bg: rgba(255, 255, 255, 0.1);
+            --accent-color: #00ddeb;
+            --shadow-color: rgba(0, 221, 235, 0.2);
+            --button-bg: #00ddeb;
+        }
+        [data-theme="light"] {
+            --background: linear-gradient(135deg, #f0f0f0, #ffffff);
+            --text-color: #333333;
+            --card-bg: rgba(245, 245, 245, 0.9);
+            --select-bg: rgba(0, 0, 0, 0.1);
+            --accent-color: #80e8f0;
+            --shadow-color: rgba(128, 232, 240, 0.2);
+            --button-bg: #80e8f0;
+        }
+        [data-theme="dark"] {
+            --background: linear-gradient(135deg, #0a121e, #15283a);
+            --text-color: #d3d3d3;
+            --card-bg: rgba(21, 40, 58, 0.9);
+            --select-bg: rgba(255, 255, 255, 0.1);
+            --accent-color: #ffbb00;
+            --shadow-color: rgba(255, 187, 0, 0.2);
+            --button-bg: #ffbb00;
+        }
+        body {
+            background: var(--background);
+            color: var(--text-color);
+            font-family: 'Orbitron', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 1rem;
+        }
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        header, .container {
+            position: relative;
+            z-index: 1;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px var(--shadow-color);
+            text-align: center;
+        }
+        .policy-btn, button {
+            background: var(--button-bg);
+            color: #000000;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .policy-btn:hover, button:hover {
+            background: #00b7c3;
+            color: #000000;
+        }
+        .theme-select {
+            background: var(--select-bg);
+            color: var(--text-color);
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            border: 1px solid var(--accent-color);
+        }
+        header {
+            padding-top: 0.5rem;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        .logo-img {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+            filter: drop-shadow(0 0 10px rgba(0, 221, 235, 0.8))
+                    drop-shadow(0 0 20px rgba(0, 221, 235, 0.6))
+                    drop-shadow(0 0 30px rgba(0, 221, 235, 0.4));
+        }
+    </style>
+</head>
+<body>
+    <div id="particles"></div>
+    <header class="bg-[var(--header-bg)] text-center">
+        <img src="/cryptoetfindex/CryptoETFIndex%20Logo.png" alt="Crypto ETF Index Logo" class="logo-img" onclick="redirectToMain()">
+        <div class="auth-controls mt-2 flex flex-col items-center gap-2">
+            <div class="flex gap-2">
+                <button class="policy-btn" onclick="redirectToMain()">Register</button>
+                <button class="policy-btn" onclick="redirectToMain()">Login</button>
+            </div>
+            <select id="theme-select" class="theme-select" aria-label="Select theme">
+                <option value="normal">Normal</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="container max-w-1400 mx-auto p-4">
+        <div class="card mb-4">
+            <h2 class="text-xl font-semibold mb-4">Welcome to Crypto ETF Indcies</h2>
+            <p class="text-sm mb-4">This page redirects to <a href="https://cryptoetfindex.com" onclick="redirectToMain()">CryptoETFIndex.com</a>, your source for tokenized stock analytics. Launching July 25, 2025!</p>
+        </div>
+        <p class="text-center text-sm mt-4">Copyright © Crypto ETF Index, May 2025</p>
+        <p class="text-center text-sm mt-2">All designs and functionality are protected by copyright. Unauthorized use is prohibited.</p>
+        <p class="text-center text-xs mt-2">Crypto ETF Index is a technology provider, not a broker-dealer. All investments carry risks. Consult a financial advisor.</p>
+    </div>
+
+    <script>
+        // Redirect to main site
+        function redirectToMain() {
+            window.location.href = 'https://cryptoetfindex.com';
+        }
+
+        // Theme Functions
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            document.getElementById('theme-select').value = theme;
+            particlesJS('particles', {
+                particles: {
+                    number: { value: theme === 'light' ? 40 : 80, density: { enable: true, value_area: 800 } },
+                    color: { value: theme === 'dark' ? '#ffbb00' : theme === 'light' ? '#80e8f0' : '#00d4ff' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: theme === 'dark' ? '#ffbb00' : theme === 'light' ? '#80e8f0' : '#00d4ff', opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 2, direction: 'none', random: true }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                    modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+                }
+            });
+        }
+
+        // Event Listeners
+        window.addEventListener('load', () => {
+            const savedTheme = localStorage.getItem('theme') || 'normal';
+            applyTheme(savedTheme);
+            document.getElementById('theme-select').addEventListener('change', (e) => {
+                applyTheme(e.target.value);
+            });
+        });
+    </script>
+</body>
+</html>
